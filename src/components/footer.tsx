@@ -35,9 +35,9 @@ export default function Footer() {
               <Image
                 src="/docwellness-logo-horizontal.png"
                 alt="DocWellness"
-                width={180}
-                height={80}
-                className="h-9 w-auto"
+                width={859}
+                height={332}
+                className="h-12 w-auto"
               />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-brand-text-secondary">
