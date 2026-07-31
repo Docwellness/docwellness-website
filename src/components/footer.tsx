@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const columns = [
@@ -30,14 +31,17 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 text-lg font-bold text-brand-primary">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-primary text-sm text-white">
-                DW
-              </span>
-              DocWellness
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/docwellness-logo-horizontal.png"
+                alt="DocWellness"
+                width={180}
+                height={80}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-brand-text-secondary">
-              Personalized nutrition coaching that connects you with real dieticians.
+              Personalized nutrition coaching with a dietician who actually knows your plan.
             </p>
           </div>
 

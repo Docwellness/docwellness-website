@@ -4,17 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "See how DocWellness pairs certified dieticians with simple meal logging, adaptive plans, and progress tracking.",
+    "See how DocWellness combines one-on-one dietician guidance with simple meal logging, adaptive plans, and progress tracking.",
 };
 
 const featureGroups = [
   {
-    title: "Dietician matching",
-    body: "A short intake captures your goals, medical history, allergies, and food preferences. We match you with a certified dietician who specializes in your situation, whether that's weight management, a medical condition, or sports nutrition.",
+    title: "A dietician who knows your plan",
+    body: "A short intake captures your goals, medical history, allergies, and food preferences. Your dietician reviews it personally and builds your plan around it — the same dietician works with you throughout, so nothing gets lost between check-ins.",
     points: [
-      "Verified, licensed dieticians only",
-      "Matched by specialty and language",
-      "Switch dieticians anytime",
+      "One dietician for your whole journey",
+      "Plans built around your actual preferences",
+      "Direct access for questions between sessions",
     ],
   },
   {
@@ -102,7 +102,7 @@ export default function FeaturesPage() {
       <section className="mx-auto max-w-6xl px-6 pb-20 text-center">
         <h2 className="text-3xl font-bold text-brand-text">See it for yourself</h2>
         <p className="mx-auto mt-4 max-w-xl text-brand-text-secondary">
-          Get matched with a dietician and start your first meal log today.
+          Start your intake with your dietician and log your first meal today.
         </p>
         <div className="mt-8">
           <Link

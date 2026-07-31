@@ -4,17 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "DocWellness exists to connect people with certified dieticians and make personalized nutrition guidance accessible day to day.",
+    "Meet the dietician behind DocWellness and the philosophy behind personalized, ongoing nutrition guidance.",
 };
 
 const values = [
   {
-    title: "Real experts, not algorithms alone",
-    body: "Every plan on DocWellness is reviewed by a licensed dietician. Technology speeds up logging and tracking; it doesn't replace clinical judgment.",
+    title: "One relationship, not a queue",
+    body: "You work with the same dietician from your first intake onward. No hand-offs, no re-explaining your history to someone new.",
   },
   {
     title: "Small changes, sustained",
-    body: "We optimize for what people actually keep doing six months later, not what looks impressive in week one.",
+    body: "Plans optimize for what you actually keep doing six months later, not what looks impressive in week one.",
   },
   {
     title: "Your data helps your care",
@@ -31,13 +31,37 @@ export default function AboutPage() {
             Nutrition guidance shouldn&apos;t be a one-time PDF
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-brand-text-secondary">
-            DocWellness was built to give people ongoing access to a real dietician, and the
-            tools to make following a plan simple enough to actually keep doing.
+            DocWellness was built around one idea: ongoing access to a dietician who actually
+            knows your plan, plus the tools to make following it simple enough to keep doing.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div className="flex aspect-square items-center justify-center rounded-3xl border border-brand-border bg-brand-primary-light text-sm font-semibold text-brand-primary/60">
+            Dietician photo
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-brand-text">Meet your dietician</h2>
+            <div className="mt-6 space-y-5 text-brand-text-secondary">
+              <p>
+                DocWellness is built around a single dietician-led practice, not a marketplace
+                of rotating providers. Every plan is reviewed and adjusted personally, so the
+                guidance you get stays consistent from your first intake to your hundredth
+                check-in.
+              </p>
+              <p>
+                The approach favors small, sustainable adjustments over rigid rules — working
+                with the foods you already eat and the life you already have, rather than
+                asking you to start over.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-20">
         <h2 className="text-2xl font-bold text-brand-text">Our story</h2>
         <div className="mt-6 space-y-5 text-brand-text-secondary">
           <p>
@@ -47,14 +71,9 @@ export default function AboutPage() {
             broken — in the weeks between appointments.
           </p>
           <p>
-            We set out to close that gap by pairing certified dieticians with a simple app
-            that makes daily logging fast and keeps your dietician in the loop automatically,
-            so your plan can adjust as your life does.
-          </p>
-          <p>
-            Today, DocWellness connects people with dieticians for everything from general
-            healthy eating to managing specific medical conditions — with the same principle
-            behind every plan: guidance should be personal, and it should keep up with you.
+            DocWellness closes that gap by pairing one-on-one dietician guidance with a simple
+            app that makes daily logging fast and keeps your dietician in the loop
+            automatically, so your plan can adjust as your life does.
           </p>
         </div>
       </section>
@@ -74,9 +93,9 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold text-brand-text">Want to work with a dietician?</h2>
+        <h2 className="text-3xl font-bold text-brand-text">Ready to get started?</h2>
         <p className="mx-auto mt-4 max-w-xl text-brand-text-secondary">
-          Get matched with a certified dietician and build a plan around your life.
+          Start your intake and build a plan around your life, with your dietician.
         </p>
         <div className="mt-8">
           <Link
