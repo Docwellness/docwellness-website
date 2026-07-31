@@ -31,13 +31,20 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/docwellness-logo-horizontal.png"
+                src="/docwellness-logo-icon.png"
+                alt=""
+                width={328}
+                height={327}
+                className="h-9 w-auto"
+              />
+              <Image
+                src="/docwellness-logo-wordmark.png"
                 alt="DocWellness"
-                width={859}
-                height={332}
-                className="h-12 w-auto"
+                width={490}
+                height={111}
+                className="h-9 w-auto"
               />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-brand-text-secondary">

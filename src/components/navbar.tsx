@@ -17,13 +17,21 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-border bg-white/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2.5">
           <Image
-            src="/docwellness-logo-horizontal.png"
+            src="/docwellness-logo-icon.png"
+            alt=""
+            width={328}
+            height={327}
+            className="h-11 w-auto sm:h-12"
+            priority
+          />
+          <Image
+            src="/docwellness-logo-wordmark.png"
             alt="DocWellness"
-            width={859}
-            height={332}
-            className="h-14 w-auto sm:h-16"
+            width={490}
+            height={111}
+            className="h-11 w-auto sm:h-12"
             priority
           />
         </Link>
