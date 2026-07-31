@@ -2,25 +2,48 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+
+  /* DocWellness brand tokens (from docwellness-user app_colors.dart) */
+  --color-primary: #851653;
+  --color-primary-dark: #530630;
+  --color-primary-light: #fef6fb;
+
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4d5761;
+  --color-text-muted: #9ca3af;
+
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+
+  --color-success: #2e7d32;
+  --color-error: #d32f2f;
+  --color-warning: #ed6c02;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-sans);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-primary: var(--color-primary);
+  --color-brand-primary-dark: var(--color-primary-dark);
+  --color-brand-primary-light: var(--color-primary-light);
+
+  --color-brand-text: var(--color-text-primary);
+  --color-brand-text-secondary: var(--color-text-secondary);
+  --color-brand-text-muted: var(--color-text-muted);
+
+  --color-brand-surface: var(--color-surface);
+  --color-brand-border: var(--color-border);
+
+  --color-brand-success: var(--color-success);
+  --color-brand-error: var(--color-error);
+  --color-brand-warning: var(--color-warning);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
