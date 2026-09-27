@@ -41,7 +41,7 @@ export default function Footer() {
               />
               <Image
                 src="/docwellness-logo-wordmark.png"
-                alt="DocWellness"
+                alt="Docwellness"
                 width={490}
                 height={111}
                 className="h-9 w-auto"
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-brand-border pt-6 text-sm text-brand-text-muted md:flex-row">
-          <p>© {new Date().getFullYear()} DocWellness. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Docwellness. All rights reserved.</p>
         </div>
       </div>
     </footer>

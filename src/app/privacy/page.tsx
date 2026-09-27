@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How DocWellness collects, uses, and protects your personal and health information.",
+    "How Docwellness collects, uses, and protects your personal and health information.",
 };
 
 export default function PrivacyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <section className="mx-auto max-w-3xl px-6 py-16">
         <div className="space-y-10 text-brand-text-secondary">
           <p>
-            DocWellness (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to
+            Docwellness (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to
             protecting your privacy. This Privacy Policy explains how we collect, use, and
             safeguard your information.
           </p>

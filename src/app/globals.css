@@ -19,6 +19,8 @@
   --color-success: #2e7d32;
   --color-error: #d32f2f;
   --color-warning: #ed6c02;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @theme inline {
@@ -46,4 +48,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes float-a {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-9px) rotate(var(--r, 0deg));
+  }
+}
+
+@keyframes float-b {
+  0%,
+  100% {
+    transform: translateY(-5px) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(6px) rotate(var(--r, 0deg));
+  }
+}
+
+.animate-float-a {
+  animation: float-a 6.5s ease-in-out infinite;
+}
+
+.animate-float-b {
+  animation: float-b 7.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-a,
+  .animate-float-b {
+    animation: none;
+    transform: rotate(var(--r, 0deg));
+  }
+}
+
+.hover-lift {
+  transition: transform 300ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
 }

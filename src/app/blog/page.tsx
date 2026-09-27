@@ -5,7 +5,7 @@ import { posts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Practical nutrition guidance from the DocWellness team — habits, meal planning, and how to read the numbers that matter.",
+    "Practical nutrition guidance from the Docwellness team — habits, meal planning, and how to read the numbers that matter.",
 };
 
 export default function BlogPage() {
@@ -13,7 +13,7 @@ export default function BlogPage() {
     <>
       <section className="bg-brand-primary-light">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
-          <h1 className="text-4xl font-bold text-brand-text md:text-5xl">The DocWellness Blog</h1>
+          <h1 className="text-4xl font-bold text-brand-text md:text-5xl">The Docwellness Blog</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-brand-text-secondary">
             Practical, no-hype nutrition guidance from our team of dieticians.
           </p>

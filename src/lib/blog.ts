@@ -19,7 +19,7 @@ export const posts: BlogPost[] = [
     readingTime: "4 min read",
     content: [
       "Most people underestimate portion sizes, not because they lack willpower, but because plates, bowls, and serving spoons have quietly grown larger over the last few decades.",
-      "When you log a meal in DocWellness, we default to a realistic single serving rather than a restaurant-sized portion, and let you adjust from there. That small nudge is often enough to close the gap between what someone thinks they're eating and what they're actually eating.",
+      "Your Docwellness plan already accounts for this: each meal your dietician assigns comes with a realistic portion and its calorie and macro count built in, rather than a restaurant-sized guess. Logging it as eaten, or quick-logging what you actually had, is often enough to close the gap between what someone thinks they're eating and what they're actually eating.",
       "Your dietician uses this data to fine-tune your plan — not by telling you to 'eat less', but by helping you recognize where portions have crept up without you noticing.",
     ],
   },
@@ -27,13 +27,13 @@ export const posts: BlogPost[] = [
     slug: "how-to-actually-stick-to-a-meal-plan",
     title: "How to actually stick to a meal plan",
     excerpt:
-      "Meal plans fail when they don't fit real life. Here's what we've learned from thousands of DocWellness members.",
+      "Meal plans fail when they don't fit real life. Here's what we've learned from thousands of Docwellness members.",
     date: "2026-05-18",
     category: "Habits",
     readingTime: "5 min read",
     content: [
       "The plans that stick are the ones built around foods you already eat, not a list of unfamiliar recipes you'll abandon after a week.",
-      "That's why every DocWellness plan starts with your current eating patterns. Your dietician works with what's already on your plate and adjusts gradually — swapping one ingredient, tweaking one portion — instead of asking for a complete overhaul on day one.",
+      "That's why every Docwellness plan starts with your current eating patterns. Your dietician works with what's already on your plate and adjusts gradually — swapping one ingredient, tweaking one portion — instead of asking for a complete overhaul on day one.",
       "Small, sustained adjustments compound. Members who make one small change per week tend to stay consistent far longer than those who try to change everything at once.",
     ],
   },
@@ -48,7 +48,7 @@ export const posts: BlogPost[] = [
     content: [
       "Start with the serving size at the top — every other number on the label is relative to it, and it's the part people skip most often.",
       "From there, glance at calories, protein, and added sugar. For most goals, those three numbers tell you most of what you need to know before deciding whether something fits your day.",
-      "When you scan a barcode in DocWellness, we surface exactly these numbers first, with the rest available if you want to dig deeper.",
+      "Your Docwellness diet plan already leads with exactly these numbers for every meal — calories, protein, carbs, fat, and fibre — so you're never left decoding a label alone.",
     ],
   },
 ];

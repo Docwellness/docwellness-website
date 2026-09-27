@@ -1,8 +1,11 @@
 import Link from "next/link";
+import Reveal from "@/components/reveal";
+import ScreenComposition from "@/components/screen-composition";
+import { homeDashboard, logMeal, dietPlan, progress, recipeLibrary, consistency } from "@/lib/screens";
 
 const stats = [
   { value: "500+", label: "members guided" },
-  { value: "60+", label: "recipes in the library" },
+  { value: "200+", label: "recipes in the library" },
   { value: "4.9/5", label: "average member rating" },
 ];
 
@@ -13,15 +16,23 @@ const highlights = [
   },
   {
     title: "Log meals in seconds",
-    body: "Search a food, pick a portion, done. DocWellness keeps logging fast so you actually stick with it.",
+    body: "Log each meal in a tap, or quick-log what you actually ate. See today's intake, exercise, and remaining calories at a glance.",
   },
   {
     title: "Plans that adapt",
-    body: "Your plan is adjusted as your weight, activity, and progress change — not a static PDF you get once and forget.",
+    body: "Your plan adjusts as your weight, activity, and progress change — not a static PDF you get once and forget.",
   },
   {
     title: "See your progress",
-    body: "Weight, macros, and adherence trends in one dashboard, shared automatically with your dietician between visits.",
+    body: "Goal Journey, weight and BMI trends, and body measurements — visible to you and your dietician between visits.",
+  },
+  {
+    title: "Recipes in your language",
+    body: "Every meal in your plan comes with a recipe, available in English, Hindi, and Marathi.",
+  },
+  {
+    title: "Flexible when life happens",
+    body: "Travelling or unwell? Your dietician can pause your plan for a few days and resume it without losing your remaining days.",
   },
 ];
 
@@ -50,6 +61,13 @@ const recipes = [
   { name: "Almond & date energy bites", meta: "Snack · 160 kcal · 5g protein", tag: "Quick snack" },
 ];
 
+const appScreens = [
+  { ...logMeal, label: "Log a meal" },
+  { ...dietPlan, label: "Your daily plan" },
+  { ...progress, label: "Track progress" },
+  { ...consistency, label: "Stay consistent" },
+];
+
 const faqs = [
   {
     q: "Do I work with the same dietician the whole time?",
@@ -61,11 +79,19 @@ const faqs = [
   },
   {
     q: "Can I message my dietician between check-ins?",
-    a: "Yes, DocWellness includes direct messaging so you can ask questions or share updates without waiting for your next scheduled session.",
+    a: "Yes, Docwellness includes direct messaging so you can ask questions or share updates without waiting for your next scheduled session.",
   },
   {
-    q: "Is DocWellness only for weight loss?",
+    q: "Is Docwellness only for weight loss?",
     a: "No. Plans are built around your goals, whether that's weight management, general healthy eating, sports nutrition, or a specific health condition.",
+  },
+  {
+    q: "What if I'm travelling or can't follow my plan for a few days?",
+    a: "Let your dietician know — they can pause your plan for a few days and resume it later without losing your remaining days.",
+  },
+  {
+    q: "Are recipes available in my language?",
+    a: "Yes. Recipes for your plan's meals are available in English, Hindi, and Marathi.",
   },
 ];
 
@@ -82,7 +108,7 @@ export default function Home() {
               Eat better, feel better — with your dietician in your corner
             </h1>
             <p className="mt-6 text-lg text-brand-text-secondary">
-              DocWellness pairs you with a dedicated dietician and gives you the tools to log
+              Docwellness pairs you with a dedicated dietician and gives you the tools to log
               meals, track progress, and stay on plan — without the guesswork.
             </p>
             <div id="get-started" className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -101,31 +127,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-brand-border bg-white p-6 shadow-xl shadow-brand-primary-light">
-            <div className="flex items-center justify-between border-b border-brand-border pb-4">
-              <p className="text-sm font-semibold text-brand-text">Today&apos;s log</p>
-              <span className="rounded-full bg-brand-primary-light px-3 py-1 text-xs font-semibold text-brand-primary">
-                1,420 kcal
-              </span>
-            </div>
-            <ul className="mt-4 space-y-3">
-              {[
-                { name: "Greek yogurt & berries", meta: "Breakfast · 320 kcal" },
-                { name: "Grilled chicken bowl", meta: "Lunch · 540 kcal" },
-                { name: "Almonds", meta: "Snack · 160 kcal" },
-              ].map((item) => (
-                <li
-                  key={item.name}
-                  className="flex items-center justify-between rounded-xl bg-brand-primary-light/60 px-4 py-3"
-                >
-                  <div>
-                    <p className="text-sm font-medium text-brand-text">{item.name}</p>
-                    <p className="text-xs text-brand-text-muted">{item.meta}</p>
-                  </div>
-                  <span className="text-brand-success">✓</span>
-                </li>
-              ))}
-            </ul>
+          <div className="relative mx-auto w-full max-w-[21rem] sm:max-w-sm">
+            <div
+              aria-hidden
+              className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-brand-primary-light via-brand-primary-light to-white blur-2xl"
+            />
+            <ScreenComposition {...homeDashboard} interactive preload />
           </div>
         </div>
       </section>
@@ -143,7 +150,7 @@ export default function Home() {
 
       <section className="bg-brand-primary-light">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-brand-text">How DocWellness works</h2>
+          <h2 className="text-3xl font-bold text-brand-text">How Docwellness works</h2>
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
             {steps.map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-sm">
@@ -156,32 +163,59 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="overflow-hidden bg-white py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-brand-text">See it in your pocket</h2>
+            <p className="mt-4 text-brand-text-secondary">
+              The same app your dietician sees on their end — real screens, not mockups.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4">
+            {appScreens.map((screen, i) => (
+              <Reveal key={screen.label} delay={i * 70}>
+                <ScreenComposition {...screen} />
+                <p className="mt-3 text-center text-sm font-medium text-brand-text-secondary">
+                  {screen.label}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-          <div className="max-w-2xl">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <Reveal>
             <h2 className="text-3xl font-bold text-brand-text">From the recipe library</h2>
             <p className="mt-4 text-brand-text-secondary">
               A sample of the flexible, realistic meals your dietician draws on when building
-              your plan — no rigid templates, no restrictive diets.
+              your plan — no rigid templates, no restrictive diets, with recipes available in
+              English, Hindi, and Marathi.
             </p>
-          </div>
-        </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {recipes.map((recipe) => (
-            <div
-              key={recipe.name}
-              className="overflow-hidden rounded-2xl border border-brand-border transition-shadow hover:shadow-lg"
-            >
-              <div className="flex h-32 items-center justify-center bg-brand-primary-light text-sm font-semibold text-brand-primary/60">
-                {recipe.tag}
-              </div>
-              <div className="p-5">
-                <h3 className="text-sm font-semibold text-brand-text">{recipe.name}</h3>
-                <p className="mt-1 text-xs text-brand-text-muted">{recipe.meta}</p>
-              </div>
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {recipes.map((recipe) => (
+                <div
+                  key={recipe.name}
+                  className="overflow-hidden rounded-2xl border border-brand-border transition-shadow hover:shadow-lg"
+                >
+                  <div className="flex h-24 items-center justify-center bg-brand-primary-light text-sm font-semibold text-brand-primary/60">
+                    {recipe.tag}
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-sm font-semibold text-brand-text">{recipe.name}</h3>
+                    <p className="mt-1 text-xs text-brand-text-muted">{recipe.meta}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </Reveal>
+
+          <Reveal delay={120} className="mx-auto w-full max-w-[18rem] sm:max-w-[20rem]">
+            <ScreenComposition {...recipeLibrary} />
+          </Reveal>
         </div>
       </section>
 
@@ -192,20 +226,21 @@ export default function Home() {
               Everything you need to build lasting habits
             </h2>
             <p className="mt-4 text-brand-text-secondary">
-              DocWellness combines your dietician&apos;s guidance with a simple daily app so
+              Docwellness combines your dietician&apos;s guidance with a simple daily app so
               healthy eating actually fits into your life.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {highlights.map((item) => (
-              <div
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {highlights.map((item, i) => (
+              <Reveal
                 key={item.title}
+                delay={i * 60}
                 className="rounded-2xl border border-brand-border p-6 transition-shadow hover:shadow-lg"
               >
                 <h3 className="text-lg font-semibold text-brand-text">{item.title}</h3>
                 <p className="mt-2 text-sm text-brand-text-secondary">{item.body}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

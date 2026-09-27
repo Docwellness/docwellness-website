@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms governing your use of the DocWellness app and services.",
+  description: "The terms governing your use of the Docwellness app and services.",
 };
 
 export default function TermsPage() {
@@ -18,13 +18,13 @@ export default function TermsPage() {
       <section className="mx-auto max-w-3xl px-6 py-16">
         <div className="space-y-10 text-brand-text-secondary">
           <p>
-            Welcome to DocWellness. By using our app, you agree to these Terms of Service.
+            Welcome to Docwellness. By using our app, you agree to these Terms of Service.
           </p>
 
           <div>
             <h2 className="text-xl font-bold text-brand-text">1. Acceptance of Terms</h2>
             <p className="mt-4">
-              By accessing or using DocWellness, you agree to be bound by these terms. If you do
+              By accessing or using Docwellness, you agree to be bound by these terms. If you do
               not agree, please do not use the app.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-brand-text">2. Description of Service</h2>
             <p className="mt-4">
-              DocWellness provides diet planning, meal tracking, and wellness monitoring services.
+              Docwellness provides diet planning, meal tracking, and wellness monitoring services.
               Our dieticians create personalized diet plans based on your health profile.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-brand-text">4. Health Disclaimer</h2>
             <p className="mt-4">
-              DocWellness is not a substitute for professional medical advice. Always consult with
+              Docwellness is not a substitute for professional medical advice. Always consult with
               your healthcare provider before making significant dietary changes. Our dieticians
               provide dietary guidance, not medical treatment.
             </p>
@@ -87,7 +87,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-brand-text">7. Limitation of Liability</h2>
             <p className="mt-4">
-              DocWellness is provided &quot;as is&quot;. We are not liable for any health outcomes
+              Docwellness is provided &quot;as is&quot;. We are not liable for any health outcomes
               resulting from following or not following diet plans provided through the app.
             </p>
           </div>

@@ -11,11 +11,11 @@ const sans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "DocWellness — Personalized nutrition coaching, made simple",
-    template: "%s | DocWellness",
+    default: "Docwellness — Personalized nutrition coaching, made simple",
+    template: "%s | Docwellness",
   },
   description:
-    "DocWellness connects you with real dieticians for personalized meal plans, easy food logging, and steady progress tracking — all in one app.",
+    "Docwellness connects you with real dieticians for personalized meal plans, easy food logging, and steady progress tracking — all in one app.",
 };
 
 export default function RootLayout({

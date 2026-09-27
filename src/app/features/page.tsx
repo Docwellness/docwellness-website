@@ -1,57 +1,75 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/reveal";
+import ScreenComposition from "@/components/screen-composition";
+import { logMeal, dietPlan, progress, groceryList, videosWisdom, messagingCheckins } from "@/lib/screens";
 
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "See how DocWellness combines one-on-one dietician guidance with simple meal logging, adaptive plans, and progress tracking.",
+    "See how Docwellness combines a personalised, dietician-built diet plan with easy meal logging, progress tracking, and daily support.",
 };
 
 const featureGroups = [
   {
-    title: "A dietician who knows your plan",
-    body: "A short intake captures your goals, medical history, allergies, and food preferences. Your dietician reviews it personally and builds your plan around it — the same dietician works with you throughout, so nothing gets lost between check-ins.",
+    title: "A diet plan made for you",
+    body: "Your dietician creates a personalised day-by-day plan, from morning drink to dinner — every meal shows calories, protein, carbs, fat, and fibre. Assigned exercises come with clear step-by-step instructions, right alongside your meals.",
     points: [
-      "One dietician for your whole journey",
-      "Plans built around your actual preferences",
-      "Direct access for questions between sessions",
+      "Plans adapt as you progress, so guidance keeps up with your body",
+      "Recipes for your plan's meals, in English, Hindi, and Marathi",
+      "Travelling or unwell? Pause your plan and resume without losing days",
     ],
+    screen: dietPlan,
   },
   {
-    title: "Meal logging",
-    body: "Search a large food database, scan a barcode, or save your regular meals as favorites. Portion sizes default to sensible servings so logging takes seconds, not minutes.",
+    title: "Easy meal logging",
+    body: "Log each meal in a tap, or quick-log what you actually ate. See today's intake, exercise, and remaining calories at a glance, with net carbs, protein, fat, and fibre tracked against your daily targets.",
     points: [
-      "Barcode scanning and food search",
-      "Favorites and repeat-meal shortcuts",
-      "Macro and calorie breakdown per entry",
+      "One tap to log a planned meal as eaten",
+      "Today's intake and remaining calories at a glance",
+      "Your dietician sees your logs and can guide you in real time",
     ],
+    screen: logMeal,
   },
   {
-    title: "Adaptive meal plans",
-    body: "Your dietician builds a plan around your preferences and adjusts it as your weight, activity, and lab results change — reviewed together on a regular cadence, not handed to you once and forgotten.",
+    title: "Talk to your dietician",
+    body: "Chat directly with your assigned dietician inside the app — ask questions, share how a meal went, or flag something that isn't working, without waiting for a scheduled visit.",
     points: [
-      "Personalized macro and calorie targets",
-      "Plan revisions as your progress updates",
-      "Built around foods you actually eat",
+      "Direct in-app chat with your assigned dietician",
+      "Notified when your plan is ready or your dietician replies",
+      "Report allergies or food restrictions so your plan stays safe",
     ],
+    screen: messagingCheckins,
   },
   {
-    title: "Progress tracking",
-    body: "Weight, adherence, and macro trends are visualized in one dashboard that you and your dietician both see, so check-ins start from real data instead of guesswork.",
+    title: "Progress you can see",
+    body: "Goal Journey shows your starting point, target weight, and daily streak. Log your weight, BMI, and body measurements, and watch weight-trend charts show how far you've come.",
     points: [
-      "Weight and measurement trends",
-      "Adherence and streak tracking",
-      "Shared dashboard for you and your dietician",
+      "Goal Journey: starting point, target weight, daily streak",
+      "Log weight, BMI, and measurements (arm, waist, hip)",
+      "Share your progress with friends and family",
     ],
+    screen: progress,
   },
   {
-    title: "Messaging & check-ins",
-    body: "Message your dietician directly between scheduled visits with questions, photos of meals, or quick wins — no waiting for the next appointment to get feedback.",
+    title: "Videos and daily wisdom",
+    body: "Short wellness videos curated for you sit right on your home screen, alongside a fresh nutrition and motivation quote every day — in English, Hindi, and Marathi.",
     points: [
-      "In-app secure messaging",
-      "Scheduled video check-ins",
-      "Reminders to keep you on track",
+      "Curated wellness videos on your home screen",
+      "A new nutrition and motivation quote daily",
+      "Available in English, Hindi, and Marathi",
     ],
+    screen: videosWisdom,
+  },
+  {
+    title: "Smart grocery list",
+    body: "Every diet plan comes with a grocery list built straight from it, organized by category and already checked off for what you've got — so shopping for the week takes minutes, not guesswork.",
+    points: [
+      "Auto-generated from your active diet plan",
+      "Organized by category, filterable by week",
+      "Mark items already purchased as you shop",
+    ],
+    screen: groceryList,
   },
 ];
 
@@ -64,14 +82,14 @@ export default function FeaturesPage() {
             Built for real, lasting nutrition habits
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-brand-text-secondary">
-            Every DocWellness feature exists to make working with a dietician easier —
+            Every Docwellness feature exists to make working with a dietician easier —
             from your first intake to the plan you follow months from now.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="space-y-16">
+        <div className="space-y-20">
           {featureGroups.map((group, i) => (
             <div
               key={group.title}
@@ -79,7 +97,7 @@ export default function FeaturesPage() {
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <div>
+              <Reveal>
                 <h2 className="text-2xl font-bold text-brand-text">{group.title}</h2>
                 <p className="mt-4 text-brand-text-secondary">{group.body}</p>
                 <ul className="mt-6 space-y-2">
@@ -90,10 +108,10 @@ export default function FeaturesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="flex h-56 items-center justify-center rounded-3xl border border-brand-border bg-brand-primary-light text-sm font-semibold text-brand-primary/60 md:h-64">
-                {group.title}
-              </div>
+              </Reveal>
+              <Reveal delay={100} className="mx-auto w-full max-w-[16rem] sm:max-w-[18rem]">
+                <ScreenComposition {...group.screen} />
+              </Reveal>
             </div>
           ))}
         </div>

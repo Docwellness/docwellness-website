@@ -28,7 +28,7 @@ export default function Navbar() {
           />
           <Image
             src="/docwellness-logo-wordmark.png"
-            alt="DocWellness"
+            alt="Docwellness"
             width={490}
             height={111}
             className="h-11 w-auto sm:h-12"
