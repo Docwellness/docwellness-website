@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/reveal";
 import ScreenComposition from "@/components/screen-composition";
@@ -55,10 +56,30 @@ const steps = [
 ];
 
 const recipes = [
-  { name: "Greek yogurt & berry bowl", meta: "Breakfast · 320 kcal · 22g protein", tag: "High protein" },
-  { name: "Grilled chicken & quinoa bowl", meta: "Lunch · 540 kcal · 41g protein", tag: "Balanced" },
-  { name: "Lentil & vegetable stew", meta: "Dinner · 460 kcal · 24g protein", tag: "Plant-forward" },
-  { name: "Almond & date energy bites", meta: "Snack · 160 kcal · 5g protein", tag: "Quick snack" },
+  {
+    name: "Chicken Biryani",
+    image: "/recipes/chicken-biryani.jpg",
+    meta: "620 kcal · 35g protein",
+    tag: "High protein",
+  },
+  {
+    name: "Egg Curry",
+    image: "/recipes/egg-curry.jpg",
+    meta: "314 kcal · 13g protein",
+    tag: "Balanced",
+  },
+  {
+    name: "Mediterranean Chickpea Bowl",
+    image: "/recipes/mediterranean-chickpea-bowl.jpg",
+    meta: "550 kcal · 18g protein",
+    tag: "Plant-forward",
+  },
+  {
+    name: "Date & Seed Energy Balls",
+    image: "/recipes/date-seed-energy-balls.jpg",
+    meta: "260 kcal · 6g protein",
+    tag: "Quick snack",
+  },
 ];
 
 const appScreens = [
@@ -201,11 +222,20 @@ export default function Home() {
                   key={recipe.name}
                   className="overflow-hidden rounded-2xl border border-brand-border transition-shadow hover:shadow-lg"
                 >
-                  <div className="flex h-24 items-center justify-center bg-brand-primary-light text-sm font-semibold text-brand-primary/60">
-                    {recipe.tag}
+                  <div className="relative h-24 w-full">
+                    <Image
+                      src={recipe.image}
+                      alt={recipe.name}
+                      fill
+                      sizes="(min-width: 768px) 25vw, 50vw"
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-sm font-semibold text-brand-text">{recipe.name}</h3>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-brand-primary">
+                      {recipe.tag}
+                    </div>
+                    <h3 className="mt-1 text-sm font-semibold text-brand-text">{recipe.name}</h3>
                     <p className="mt-1 text-xs text-brand-text-muted">{recipe.meta}</p>
                   </div>
                 </div>
