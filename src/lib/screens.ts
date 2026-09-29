@@ -13,8 +13,8 @@ export const homeDashboard = {
   card: {
     src: "/screens/cards/goal-journey.webp",
     alt: "Goal journey card showing current weight and streak",
-    width: 560,
-    height: 344,
+    width: 1020,
+    height: 618,
     placement: { top: "0%", left: "20%", width: "62%", rotate: -3 },
   },
   aspect: "1 / 1.42",
