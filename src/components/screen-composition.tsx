@@ -1,7 +1,10 @@
+"use client";
+
 import type { CSSProperties } from "react";
 import PhoneFrame from "@/components/phone-frame";
 import FloatingCard from "@/components/floating-card";
 import TiltGroup from "@/components/tilt-group";
+import { useLightbox } from "@/components/lightbox-provider";
 
 type Placement = {
   top: string;
@@ -31,6 +34,7 @@ export default function ScreenComposition({
   interactive = false,
   className = "",
   preload = false,
+  lightbox = true,
 }: {
   primary: ScreenProps;
   primaryPlacement: Placement;
@@ -41,7 +45,11 @@ export default function ScreenComposition({
   interactive?: boolean;
   className?: string;
   preload?: boolean;
+  lightbox?: boolean;
 }) {
+  const { openLightbox } = useLightbox();
+  const screens = secondary ? [primary, secondary] : [primary];
+
   const content = (
     <div className="relative h-full w-full" style={{ aspectRatio: aspect }}>
       {secondary && secondaryPlacement && (
@@ -49,6 +57,7 @@ export default function ScreenComposition({
           src={secondary.src}
           alt={secondary.alt}
           width={secondaryPlacement.width}
+          onClick={lightbox ? () => openLightbox(screens, 1) : undefined}
           className="animate-float-b absolute"
           style={
             {
@@ -65,6 +74,7 @@ export default function ScreenComposition({
         alt={primary.alt}
         width={primaryPlacement.width}
         preload={preload}
+        onClick={lightbox ? () => openLightbox(screens, 0) : undefined}
         className="animate-float-a absolute"
         style={
           {
