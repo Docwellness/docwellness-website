@@ -196,7 +196,7 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4">
             {appScreens.map((screen, i) => (
               <Reveal key={screen.label} delay={i * 70}>
-                <ScreenComposition {...screen} />
+                <ScreenComposition {...screen} interactive />
                 <p className="mt-3 text-center text-sm font-medium text-brand-text-secondary">
                   {screen.label}
                 </p>
@@ -244,7 +244,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={120} className="mx-auto w-full max-w-[18rem] sm:max-w-[20rem]">
-            <ScreenComposition {...recipeLibrary} />
+            <ScreenComposition {...recipeLibrary} interactive />
           </Reveal>
         </div>
       </section>

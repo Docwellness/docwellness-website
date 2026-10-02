@@ -9,6 +9,7 @@ export default function PhoneFrame({
   style,
   imgSizes = "220px",
   preload = false,
+  onClick,
 }: {
   src: string;
   alt: string;
@@ -17,6 +18,7 @@ export default function PhoneFrame({
   style?: CSSProperties;
   imgSizes?: string;
   preload?: boolean;
+  onClick?: () => void;
 }) {
   return (
     <div
@@ -72,6 +74,28 @@ export default function PhoneFrame({
             className="object-cover object-top"
           />
         </div>
+
+        {onClick && (
+          <button
+            type="button"
+            onClick={onClick}
+            aria-label={`View ${alt} full size`}
+            style={{ borderRadius: "8% / 4%" }}
+            className="group absolute inset-0 z-30 cursor-pointer appearance-none border-0 bg-transparent p-0 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
+          >
+            <span
+              style={{ borderRadius: "8% / 4%" }}
+              className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"
+            />
+            <span className="absolute bottom-[6%] left-1/2 flex w-max -translate-x-1/2 translate-y-2 items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-semibold text-brand-primary opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100">
+              <svg viewBox="0 0 20 20" fill="none" className="h-3 w-3" aria-hidden>
+                <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" strokeWidth="1.6" />
+                <path d="M13 13L17.5 17.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+              View screen
+            </span>
+          </button>
+        )}
       </div>
     </div>
   );

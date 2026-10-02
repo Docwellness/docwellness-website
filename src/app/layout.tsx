@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import LightboxProvider from "@/components/lightbox-provider";
 
 const sans = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -26,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-brand-text">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <LightboxProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LightboxProvider>
       </body>
     </html>
   );
