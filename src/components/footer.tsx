@@ -15,6 +15,7 @@ const columns = [
     links: [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
+      { href: "/support", label: "Support" },
     ],
   },
   {
@@ -22,6 +23,8 @@ const columns = [
     links: [
       { href: "/privacy", label: "Privacy" },
       { href: "/terms", label: "Terms" },
+      { href: "/health-disclaimer", label: "Health disclaimer" },
+      { href: "/delete-account", label: "Delete account" },
     ],
   },
 ];

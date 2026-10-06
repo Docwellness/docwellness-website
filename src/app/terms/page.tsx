@@ -11,7 +11,7 @@ export default function TermsPage() {
       <section className="bg-brand-primary-light">
         <div className="mx-auto max-w-3xl px-6 py-20 text-center">
           <h1 className="text-4xl font-bold text-brand-text md:text-5xl">Terms of Service</h1>
-          <p className="mt-4 text-sm text-brand-text-secondary">Last updated: March 2026</p>
+          <p className="mt-4 text-sm text-brand-text-secondary">Last updated: October 2026</p>
         </div>
       </section>
 
@@ -64,7 +64,8 @@ export default function TermsPage() {
             <p className="mt-4">
               Docwellness is not a substitute for professional medical advice. Always consult with
               your healthcare provider before making significant dietary changes. Our dieticians
-              provide dietary guidance, not medical treatment.
+              provide dietary guidance, not medical treatment. See our Health Disclaimer page
+              for details.
             </p>
           </div>
 
@@ -79,7 +80,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-bold text-brand-text">6. Account Termination</h2>
             <p className="mt-4">
-              You may delete your account at any time. We reserve the right to suspend or
+              You may delete your account at any time from the app (Profile → Account → Delete Account) or by following the steps on our Delete Account page. We reserve the right to suspend or
               terminate accounts that violate these terms.
             </p>
           </div>
