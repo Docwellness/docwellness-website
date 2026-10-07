@@ -207,11 +207,11 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection id="children" title="9. Children">
+      <LegalSection id="children" title="9. Age requirement">
         <p>
-          Docwellness is intended for adults aged 18 and over. We do not knowingly collect data
-          from children. If you believe a child has created an account, contact us and we will
-          delete it.
+          Docwellness is intended for people aged 16 and over. We do not knowingly collect data
+          from anyone under 16. If you believe someone under 16 has created an account, contact
+          us and we will delete it.
         </p>
       </LegalSection>
 
