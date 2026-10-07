@@ -27,9 +27,9 @@ export const logMeal = {
 };
 
 export const dietPlan = {
-  primary: { src: "/screens/raw/diet-plan.webp", alt: "A day's diet plan with logged meals in the Docwellness app" },
+  primary: { src: "/screens/raw/diet-plan-v2.webp", alt: "A day's diet plan with logged meals in the Docwellness app" },
   primaryPlacement: { top: "9%", left: "38%", width: "60%", rotate: 6 },
-  secondary: { src: "/screens/raw/exercises.webp", alt: "Assigned exercises for the day in the Docwellness app" },
+  secondary: { src: "/screens/raw/exercises-v2.webp", alt: "Assigned exercises for the day in the Docwellness app" },
   secondaryPlacement: { top: "3%", left: "0%", width: "55%", rotate: -8 },
   aspect: "1 / 1.42",
 };
@@ -54,7 +54,7 @@ export const groceryList = {
 };
 
 export const recipeLibrary = {
-  primary: { src: "/screens/raw/recipe-library.webp", alt: "A day's planned meals drawn from the Docwellness recipe library" },
+  primary: { src: "/screens/raw/recipe-library-v2.webp", alt: "A day's planned meals drawn from the Docwellness recipe library" },
   primaryPlacement: { top: "3%", left: "21%", width: "58%", rotate: 0 },
   aspect: "1 / 1.32",
 };
