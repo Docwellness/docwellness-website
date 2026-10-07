@@ -51,7 +51,7 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <Link
-            href="/#get-started"
+            href="/open"
             className="rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-primary-dark"
           >
             Get started
@@ -87,7 +87,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/#get-started"
+              href="/open"
               onClick={() => setOpen(false)}
               className="rounded-full bg-brand-primary px-5 py-2.5 text-center text-sm font-semibold text-white"
             >

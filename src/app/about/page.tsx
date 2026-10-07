@@ -128,7 +128,7 @@ export default function AboutPage() {
         </p>
         <div className="mt-8">
           <Link
-            href="/#get-started"
+            href="/open"
             className="inline-block rounded-full bg-brand-primary px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-primary-dark"
           >
             Get started
