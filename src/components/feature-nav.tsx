@@ -46,7 +46,7 @@ export default function FeatureNav({ items }: { items: { id: string; title: stri
     <div className="sticky top-[57px] z-30 -mx-6 border-b border-brand-border bg-white/90 px-6 backdrop-blur sm:top-[65px]">
       <div
         ref={navRef}
-        className="mx-auto flex max-w-6xl snap-x gap-2 overflow-x-auto py-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mx-auto flex max-w-6xl snap-x gap-2 overflow-x-auto py-3 [&>*:first-child]:ml-auto [&>*:last-child]:mr-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {items.map((item) => {
           const active = item.id === activeId;
