@@ -64,6 +64,15 @@ export default function HealthDisclaimerPage() {
           If you feel unwell or think you are having a medical emergency, stop and seek medical
           help immediately — call 112 (EU) or your local emergency number.
         </p>
+        <Bullets
+          items={[
+            "India: 112 (unified emergency) or 102 (ambulance)",
+            "USA: 911",
+            "UK: 999 or 112",
+            "UAE: 998 (ambulance) or 999",
+            "Germany: 112",
+          ]}
+        />
       </LegalSection>
     </LegalPage>
   );
