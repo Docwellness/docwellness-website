@@ -40,8 +40,12 @@ export default function SupportPage() {
             </Link>
           </li>
           <li>
-            Access, correct or export your data: email us with the subject &quot;Data
-            request&quot;.
+            Download a copy of your data, withdraw consent, or turn crash reports and analytics on
+            or off: <strong>Settings</strong> → <strong>Privacy and consent</strong> in the app.
+          </li>
+          <li>
+            Access, correct, restrict or object to the use of your data, or ask for a complete copy:
+            email us with the subject &quot;Data request&quot;.
           </li>
           <li>
             Forgot your password? Use <strong>Forgot password</strong> on the sign-in screen.

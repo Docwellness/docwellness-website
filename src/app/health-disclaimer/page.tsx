@@ -66,11 +66,15 @@ export default function HealthDisclaimerPage() {
         </p>
         <Bullets
           items={[
-            "India: 112 (unified emergency) or 102 (ambulance)",
-            "USA: 911",
+            "Austria, Germany, Greece, Hungary, Iceland, Netherlands, Poland: 112",
+            "France: 15 (medical emergency) or 112",
             "UK: 999 or 112",
+            "India: 112 (unified emergency) or 102 (ambulance)",
+            "USA and Canada: 911",
+            "Australia: 000",
+            "New Zealand: 111",
+            "Saudi Arabia: 997 (ambulance) or 911",
             "UAE: 998 (ambulance) or 999",
-            "Germany: 112",
           ]}
         />
       </LegalSection>

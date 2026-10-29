@@ -64,6 +64,7 @@ export default function DeleteAccountPage() {
             "Your first-consultation answers and uploaded lab reports.",
             "Your diet plans, meal, water and exercise logs, check-ins and notifications.",
             "Your chat messages with your dietician and your reviews.",
+            "Your consent records.",
             "Your payment proofs and subscription records, subject to the exception below.",
           ]}
         />
@@ -80,12 +81,22 @@ export default function DeleteAccountPage() {
 
       <LegalSection id="partial" title="Want to remove only some data?">
         <p>
-          You can ask us to delete specific data (for example your body photos or chat history)
-          without closing your account. Email{" "}
+          In the app, go to <strong>Profile</strong> → <strong>Settings</strong> →{" "}
+          <strong>Privacy and consent</strong> → <strong>Delete account / data</strong> and choose
+          the categories to remove (for example your body photos or chat history) without closing
+          your account.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="export" title="Want a copy of your data first?">
+        <p>
+          Before deleting, go to <strong>Settings</strong> → <strong>Privacy and consent</strong> →{" "}
+          <strong>Download my data</strong> to save a copy as a file. If you cannot use the app,
+          email{" "}
           <a className="text-brand-primary underline" href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
           </a>{" "}
-          and tell us what to remove.
+          with the subject &quot;Data request&quot;.
         </p>
       </LegalSection>
 
